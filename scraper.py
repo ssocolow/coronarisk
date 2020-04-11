@@ -22,3 +22,5 @@ results = soup.find_all("td",class_="uMsnNd HAChlc")
 wconfirmed = results[0].contents[0]
 wrecovered = results[2].contents[0]
 wdead = results[3].contents[0]
+
+print("confirmed ", wconfirmed)
