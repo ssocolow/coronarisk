@@ -1,7 +1,8 @@
 function calculate()
 {
-    let state = document.querySelector("#state").value;
-    let age = document.querySelector("#age").value;
+    let county_num = document.querySelector("#county").value;
+	document.querySelector('#p_infected').innerHTML = astatic_data[county_num][0]; 
+    /**let age = document.querySelector("#age").value;
     let health = document.querySelector("#health").value;
 
 
@@ -17,4 +18,5 @@ function calculate()
         document.querySelector('#p_infected').innerHTML = 'NA';
         document.querySelector('#p_dying').innerHTML = 'NA';
     }
+**/
 }
