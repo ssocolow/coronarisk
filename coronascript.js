@@ -1,13 +1,21 @@
 function calculate()
 {
-	let county_num = document.querySelector("#county").value;
-	document.querySelector('#p_dying').innerHTML = astatic_data[county_num][0]; 
-
-	let prob = updated_data[county_num][1] / astatic_data[county_num][0]; 	
-	document.querySelector('#p_infected').innerHTML = prob*100 + "%";
+	
 	convertStringsToNums();
+	let county_num = document.querySelector("#county").value;
 
-
+	let prob_i = updated_data[county_num][1] / astatic_data[county_num][0]; 	
+	document.querySelector('#p_infected').innerHTML = prob_i*100 + "%";
+	
+	let prob_d = prob_i * (updated_data[county_num][2]/updated_data[county_num][1]);
+	if (prob_d == 0)
+	{
+		document.querySelector('#p_dying').innerHTML = prob_d*100 + "%" + " (no deaths currently recorded in selected county)";
+	}
+	else
+	{
+		document.querySelector('#p_dying').innerHTML = prob_d*100 + "%";
+	}
 /**let age = document.querySelector("#age").value;
     let health = document.querySelector("#health").value;
 
