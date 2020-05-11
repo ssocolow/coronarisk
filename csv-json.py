@@ -9,11 +9,13 @@ with open('mainecounties.csv') as csvDataFile:
 
 newdata = []
 
-for d in totaldata[-16:-1]:
+for d in totaldata[-17:-1]:
 	newdata.append([d[1],d[4],d[5]])
 
 newdata.append([totaldata[-1][1],totaldata[-1][4],totaldata[-1][5]])
 
+if newdata[0][0] != "Androscoggin":
+        print("ERROR, data is not in right format")
 for d in newdata:
 	if d[0] == 'Unknown':
 		newdata.remove(d)

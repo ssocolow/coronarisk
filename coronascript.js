@@ -3,8 +3,19 @@ function calculate()
 	
 	convertStringsToNums();
 	let county_num = document.querySelector("#county").value;
+	
+	let gender = document.querySelector("#gender").value;
+	
+	//gender population
+	let female_pop = astatic_data[county_num][1] * astatic_data[county_num][0];
+	let male_pop = astatic_data[county_num][0] - female_pop;
+	
+	let calculated_pops = [male_pop, female_pop, astatic_data[county_num][0]];
+	let calculated_infected = [updated_data[county_num][1] * 0.638, updated_data[county_num][1] * 0.362, updated_data[county_num][1]];
 
-	let prob_i = updated_data[county_num][1] / astatic_data[county_num][0]; 	
+	let prob_i = calculated_infected[gender] / calculated_pops[gender]
+
+	//let prob_i = updated_data[county_num][1] / astatic_data[county_num][0]; 	
 	document.querySelector('#p_infected').innerHTML = prob_i*100 + "%";
 	
 	let prob_d = prob_i * (updated_data[county_num][2]/updated_data[county_num][1]);
@@ -16,6 +27,12 @@ function calculate()
 	{
 		document.querySelector('#p_dying').innerHTML = prob_d*100 + "%";
 	}
+
+
+
+
+
+
 /**let age = document.querySelector("#age").value;
     let health = document.querySelector("#health").value;
 
