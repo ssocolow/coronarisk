@@ -1,11 +1,13 @@
 function calculate()
 {
-	
+	//convert the strings of numbers to integer numbers
 	convertStringsToNums();
+
+	//get county, age, and gender data
 	let county_num = document.querySelector("#county").value;
-	
 	let gender = document.querySelector("#gender").value;
-	
+	let age = document.querySelector("#age").value;
+
 	//gender population
 	let female_pop = astatic_data[county_num][1] * astatic_data[county_num][0];
 	let male_pop = astatic_data[county_num][0] - female_pop;
