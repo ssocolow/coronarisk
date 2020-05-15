@@ -8,14 +8,18 @@ function calculate()
 	let gender = document.querySelector("#gender").value;
 	let age = document.querySelector("#age").value;
 
-	//gender population
+	//gender population and infected
 	let female_pop = astatic_data[county_num][1] * astatic_data[county_num][0];
-	let male_pop = astatic_data[county_num][0] - female_pop;
+	let male_pop = astatic_data[county_num][0] - female_pop;	
+	let gender_pops = [male_pop, female_pop, astatic_data[county_num][0]];
+	let gender_infected = [updated_data[county_num][1] * 0.638, updated_data[county_num][1] * 0.362, updated_data[county_num][1]];
 	
-	let calculated_pops = [male_pop, female_pop, astatic_data[county_num][0]];
-	let calculated_infected = [updated_data[county_num][1] * 0.638, updated_data[county_num][1] * 0.362, updated_data[county_num][1]];
+	//age population and infected
+	let age_pop = astatic_data[county_num][0] * county_age_data[age];
+	let age_infected = updated_data[county_num][1] * corona_age_data[age];
 
-	let prob_i = calculated_infected[gender] / calculated_pops[gender]
+	//old and will be updated once I figure stuff out
+	let prob_i = gender_infected[gender] / gender_pops[gender]
 
 	//let prob_i = updated_data[county_num][1] / astatic_data[county_num][0]; 	
 	document.querySelector('#p_infected').innerHTML = prob_i*100 + "%";
