@@ -1,7 +1,9 @@
 # coronarisk
 Website that tells you your risk of coronavirus based on statistics and your input data
 
-Uses nytimes coronavirus data that can be found here: https://github.com/nytimes/covid-19-data
+Uses nytimes updating coronavirus data that can be found here: https://github.com/nytimes/covid-19-data
+
+Uses historical coronavirus data from a study here: http://weekly.chinacdc.cn/en/article/id/e53946e2-c6c4-41e9-9a9b-fea8db1a8f51
 
 Currently works for counties in the state of Maine
 
