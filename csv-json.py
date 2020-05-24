@@ -30,4 +30,9 @@ for d in newdata:
 	f.write(",")
 
 f.write("]")
+
+f.write("\n")
+
+f.write("let date = ")
+f.write("\"" + str(totaldata[-1][0]) + "\"")
 f.close()

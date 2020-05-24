@@ -65,3 +65,9 @@ function convertStringsToNums()
 	}
 
 }
+
+function updateDate()
+{
+	let updated_date = date;
+	document.getElementById("date").innerHTML = "Data updated as of:  " + "<b>" + updated_date + "</b>";
+}
