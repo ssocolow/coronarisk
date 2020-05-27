@@ -68,3 +68,13 @@ let corona_age_data =
 0.157,
 0.051,
 ]
+
+let corona_disease_data =
+[
+1,
+0.397,
+0.197,
+0.227,
+0.079,
+0.015,
+]
