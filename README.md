@@ -10,4 +10,5 @@ Currently works for counties in the state of Maine
 ## calculations
 Probability of being infected is calculated by (number of people infected in county with inputted traits / total population of county with inputted traits) (then times 100 for a percent)
 
-Probability of being dead is (probability of being infected with inputted traits * (number of people dead from covid-19 in county / number of people infected with the coronavirus in the county) (then times 100 for a percent)
+Probability of being dead is (probability of being infected with inputted traits * (number of people dead from covid-19 in county / number of people infected with the coronavirus in the county) (then times 100 for a percent) if "None" is selected for health conditions.
+If another health condition is selected, then the probability of being dead is the whichever is greater, (the county data mortality rate (number of people dead from covid-19 in county / number of people infected with the coronavirus in the county) or the coronavirus study mortality rate for that condition) then times the probability of being infected in the county with inputted traits.
