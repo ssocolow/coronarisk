@@ -6,10 +6,11 @@ function calculate()
 	//get an array with probabilities for each gender in the county pop
 	let gender_probs = getGenderProbs();
 
-	//get county, age, and gender data
+	//get county, age, gender, and health data
 	let county_num = document.querySelector("#county").value;
 	let gender = document.querySelector("#gender").value;
 	let age = document.querySelector("#age").value;
+	let health = document.querySelector("#health").value;
 
 	//have array of gender probabilities according to corona study
 	//goes male, female, total
@@ -29,7 +30,18 @@ function calculate()
 
 	document.querySelector('#p_infected').innerHTML = prob_i*100 + "%";
 	
-	let prob_d = prob_i * (updated_data[county_num][2]/updated_data[county_num][1]);
+	//if no bad health conditions then prob of dead = number of infected in county / number of dead in county
+	let mortality = updated_data[county_num][2]/updated_data[county_num][1];
+	let prob_d = 0;
+	//if there are bad health conditions, then the prob dead is the greatest number out of the first mortality and the corona disease data mortality
+	if (health == 0 || corona_disease_data[health] < mortality || updated_data[county_num][2] == 0)
+	{
+		prob_d = prob_i * mortality;
+	}
+	else
+	{
+		prob_d = prob_i * corona_disease_data[health];
+	}
 	if (prob_d == 0)
 	{
 		document.querySelector('#p_dying').innerHTML = prob_d*100 + "%" + " (no deaths currently recorded in selected county)";
