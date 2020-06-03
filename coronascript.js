@@ -44,7 +44,7 @@ function calculate()
 	}
 	if (prob_d == 0)
 	{
-		document.querySelector('#p_dying').innerHTML = prob_d*100 + "%" + " (no deaths currently recorded in selected county)";
+		document.querySelector('#p_dying').innerHTML = prob_d*100 + "%" + " (no deaths currently recorded in selected county or very small number)";
 	}
 	else
 	{
