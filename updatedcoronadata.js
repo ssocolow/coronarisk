@@ -1,2 +1,2 @@
-let updated_data = [['Androscoggin','390','3'],['Aroostook', '10', '1'],['Cumberland', '1339', '57'],['Franklin', '36', '1'],['Hancock', '12', '1'],['Kennebec', '132', '9'],['Knox', '21', '1'],['Lincoln', '20', '0'],['Oxford', '31', '0'],['Penobscot', '101', '2'],['Piscataquis', '1', '0'],['Sagadahoc', '30', '0'],['Somerset', '25', '0'],['Waldo', '54', '14'],['Washington', '1', '0'],['York', '432', '11'],]
-let date = "2020-06-10"
+let updated_data = [['Androscoggin','425','3'],['Aroostook', '10', '1'],['Cumberland', '1434', '57'],['Franklin', '37', '1'],['Hancock', '13', '1'],['Kennebec', '136', '9'],['Knox', '22', '1'],['Lincoln', '21', '0'],['Oxford', '33', '0'],['Penobscot', '102', '2'],['Piscataquis', '1', '0'],['Sagadahoc', '30', '0'],['Somerset', '25', '0'],['Waldo', '55', '14'],['Washington', '1', '0'],['York', '446', '11'],]
+let date = "2020-06-14"
