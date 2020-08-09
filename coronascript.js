@@ -28,7 +28,7 @@ function calculate()
 	//the probability of being infected is the infected selected demographic pop over total demographic pop
 	let prob_i = dpop_i / dpop;
 
-	document.querySelector('#p_infected').innerHTML = prob_i*100 + "%";
+	document.querySelector('#p_infected').innerHTML = prob_i*100 + "%" + " (1 out of " + Math.round(1/prob_i) + ")";
 	
 	//if no bad health conditions then prob of dead = number of infected in county / number of dead in county
 	let mortality = updated_data[county_num][2]/updated_data[county_num][1];
@@ -48,7 +48,7 @@ function calculate()
 	}
 	else
 	{
-		document.querySelector('#p_dying').innerHTML = prob_d*100 + "%";
+		document.querySelector('#p_dying').innerHTML = prob_d*100 + "%" + " (1 out of " + Math.round(1/prob_d) + ")";
 	}
 }
 
